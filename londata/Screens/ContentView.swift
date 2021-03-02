@@ -12,7 +12,10 @@ struct ContentView: View {
     @ObservedObject var vm = LondataMapVM()
     
     var body: some View {
-        LondataMap(pollutionData: $vm.pollutionData, covidCases: $vm.covidCases).onAppear {
+        VStack {
+            CovidMap(covidCases: $vm.covidCases)
+            PollutionMap(pollutionData: $vm.pollutionData)
+        }.onAppear {
             vm.getAllCovidCases()
             vm.getPollutionData()
         }

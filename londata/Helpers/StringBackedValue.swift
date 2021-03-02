@@ -12,6 +12,7 @@ protocol StringRepresentable: CustomStringConvertible {
 }
 
 extension Double: StringRepresentable {}
+extension Int: StringRepresentable {}
 
 struct StringBacked<Value: StringRepresentable>: Codable {
     var value: Value

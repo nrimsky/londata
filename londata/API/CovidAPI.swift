@@ -17,7 +17,6 @@ struct CovidAPI {
         let dateString = dateFormatter.string(from: yesterdaysDate!)
         let nameEncoded = borough.name.replacingOccurrences(of:" ", with: "%20")
         let urlStr = base+"areaName=\(nameEncoded);date=\(dateString)&structure=%7B%22newCases%22:%22newCasesByPublishDate%22%7D&format=json&page=1"
-        print(urlStr)
         return URL(string: urlStr)!
     }
     

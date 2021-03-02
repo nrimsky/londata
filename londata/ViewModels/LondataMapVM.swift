@@ -25,7 +25,7 @@ class LondataMapVM: NSObject, ObservableObject, CLLocationManagerDelegate {
     // MARK: - Data
     
     @Published var crimes = [StreetCrime]()
-    @Published var pollutionData = [LocalAuthorityData]()
+    @Published var pollutionData = [PollutionDatapoint]()
     @Published var covidCases = [Borough: Int]()
     
     // MARK: - List of boroughs
@@ -106,7 +106,7 @@ class LondataMapVM: NSObject, ObservableObject, CLLocationManagerDelegate {
                 }
             }, receiveValue: { [weak self] apiResponse in
                 print(apiResponse)
-                self?.pollutionData = apiResponse.HourlyAirQualityIndex.LocalAuthority
+                self?.pollutionData = apiResponse.getPollutionDatapoints()
             })
         cancellables.insert(cancellable)
     }
