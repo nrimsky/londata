@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var vm = LondataMapVM()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        LondataMap(pollutionData: $vm.pollutionData, covidCases: $vm.covidCases).onAppear {
+            vm.getAllCovidCases()
+            vm.getPollutionData()
+        }
     }
 }
 

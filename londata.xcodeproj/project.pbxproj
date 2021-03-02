@@ -7,19 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A371385125EE44F0000324E9 /* LondataMapVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371385025EE44F0000324E9 /* LondataMapVM.swift */; };
 		A398CDE225E95EA900775778 /* londataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A398CDE125E95EA900775778 /* londataApp.swift */; };
 		A398CDE425E95EA900775778 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A398CDE325E95EA900775778 /* ContentView.swift */; };
 		A398CDE625E95EB000775778 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A398CDE525E95EB000775778 /* Assets.xcassets */; };
 		A398CDE925E95EB000775778 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A398CDE825E95EB000775778 /* Preview Assets.xcassets */; };
 		A398CDF425E95EB100775778 /* londataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A398CDF325E95EB100775778 /* londataTests.swift */; };
 		A398CDFF25E95EB100775778 /* londataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A398CDFE25E95EB100775778 /* londataUITests.swift */; };
-		A398CE2225E9632800775778 /* DataHexagon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A398CE2125E9632800775778 /* DataHexagon.swift */; };
 		A398CE2925E9635400775778 /* PollutionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A398CE2825E9635400775778 /* PollutionAPI.swift */; };
 		A398CE3625E9636C00775778 /* CovidAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A398CE3525E9636C00775778 /* CovidAPI.swift */; };
 		A3B59B6925EA6D5B002F7DCA /* Agent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B59B6825EA6D5B002F7DCA /* Agent.swift */; };
 		A3B59B7125EAB3FB002F7DCA /* CrimeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B59B7025EAB3FB002F7DCA /* CrimeAPI.swift */; };
 		A3B59B7725EAB80D002F7DCA /* StringBackedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B59B7625EAB80D002F7DCA /* StringBackedValue.swift */; };
 		A3B59B7C25EABE42002F7DCA /* PlaceNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B59B7B25EABE42002F7DCA /* PlaceNames.swift */; };
+		A3B59BF825EE4152002F7DCA /* LondataMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B59BEA25EE40F8002F7DCA /* LondataMap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A371385025EE44F0000324E9 /* LondataMapVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LondataMapVM.swift; sourceTree = "<group>"; };
 		A398CDDE25E95EA900775778 /* londata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = londata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A398CDE125E95EA900775778 /* londataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = londataApp.swift; sourceTree = "<group>"; };
 		A398CDE325E95EA900775778 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,13 +54,13 @@
 		A398CDFA25E95EB100775778 /* londataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = londataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A398CDFE25E95EB100775778 /* londataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = londataUITests.swift; sourceTree = "<group>"; };
 		A398CE0025E95EB100775778 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A398CE2125E9632800775778 /* DataHexagon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHexagon.swift; sourceTree = "<group>"; };
 		A398CE2825E9635400775778 /* PollutionAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollutionAPI.swift; sourceTree = "<group>"; };
 		A398CE3525E9636C00775778 /* CovidAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidAPI.swift; sourceTree = "<group>"; };
 		A3B59B6825EA6D5B002F7DCA /* Agent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agent.swift; sourceTree = "<group>"; };
 		A3B59B7025EAB3FB002F7DCA /* CrimeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimeAPI.swift; sourceTree = "<group>"; };
 		A3B59B7625EAB80D002F7DCA /* StringBackedValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringBackedValue.swift; sourceTree = "<group>"; };
 		A3B59B7B25EABE42002F7DCA /* PlaceNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceNames.swift; sourceTree = "<group>"; };
+		A3B59BEA25EE40F8002F7DCA /* LondataMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LondataMap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A371384F25EE44D7000324E9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A371385025EE44F0000324E9 /* LondataMapVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A371385525EE72E3000324E9 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				A398CDE325E95EA900775778 /* ContentView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 		A398CDD525E95EA900775778 = {
 			isa = PBXGroup;
 			children = (
@@ -109,12 +127,13 @@
 		A398CDE025E95EA900775778 /* londata */ = {
 			isa = PBXGroup;
 			children = (
+				A371385525EE72E3000324E9 /* Screens */,
+				A371384F25EE44D7000324E9 /* ViewModels */,
 				A3B59B7525EAB800002F7DCA /* Helpers */,
 				A398CE2725E9634100775778 /* API */,
 				A398CE2625E9632E00775778 /* Models */,
 				A398CE1B25E9630400775778 /* Components */,
 				A398CDE125E95EA900775778 /* londataApp.swift */,
-				A398CDE325E95EA900775778 /* ContentView.swift */,
 				A398CDE525E95EB000775778 /* Assets.xcassets */,
 				A398CDEA25E95EB000775778 /* Info.plist */,
 				A398CDE725E95EB000775778 /* Preview Content */,
@@ -151,7 +170,7 @@
 		A398CE1B25E9630400775778 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				A398CE2125E9632800775778 /* DataHexagon.swift */,
+				A3B59BEA25EE40F8002F7DCA /* LondataMap.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -317,10 +336,11 @@
 				A3B59B6925EA6D5B002F7DCA /* Agent.swift in Sources */,
 				A3B59B7125EAB3FB002F7DCA /* CrimeAPI.swift in Sources */,
 				A398CDE425E95EA900775778 /* ContentView.swift in Sources */,
+				A3B59BF825EE4152002F7DCA /* LondataMap.swift in Sources */,
 				A398CE3625E9636C00775778 /* CovidAPI.swift in Sources */,
 				A398CE2925E9635400775778 /* PollutionAPI.swift in Sources */,
 				A398CDE225E95EA900775778 /* londataApp.swift in Sources */,
-				A398CE2225E9632800775778 /* DataHexagon.swift in Sources */,
+				A371385125EE44F0000324E9 /* LondataMapVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

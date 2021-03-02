@@ -10,13 +10,17 @@ import MapKit
 import Combine
 
 struct CrimeAPI {
-    static let agent = Agent()
-    static let base = URL(string: "https://data.police.uk/api/crimes-street/all-crime")!
+    private let agent = Agent()
+    private let base = URL(string: "https://data.police.uk/api/crimes-street/all-crime")!
 }
 
-extension CrimeAPI {
+protocol CrimeDatasource {
+    func crimes(location: CLLocationCoordinate2D) -> AnyPublisher<[StreetCrime], Error>
+}
+
+extension CrimeAPI: CrimeDatasource {
     
-    static func crimes(location: CLLocationCoordinate2D) -> AnyPublisher<[StreetCrime], Error> {
+    func crimes(location: CLLocationCoordinate2D) -> AnyPublisher<[StreetCrime], Error> {
         let request = URLRequest(url:base
             .appendingPathComponent(
                 "?lat=\(location.latitude)&lng=\(location.longitude)"

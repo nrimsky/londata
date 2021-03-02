@@ -8,14 +8,18 @@
 import Foundation
 import Combine
 
-enum PollutionAPI {
-    static let url = URL(string: "http://api.erg.ic.ac.uk/AirQuality/Hourly/MonitoringIndex/GroupName=London/Json")!
-    static let agent = Agent()
+struct PollutionAPI {
+    private let url = URL(string: "https://api.erg.ic.ac.uk/AirQuality/Hourly/MonitoringIndex/GroupName=London/Json")!
+    private let agent = Agent()
 }
 
-extension PollutionAPI {
+protocol PollutionDatasource {
+    func pollutionDataLondon() -> AnyPublisher<PollutionAPIResponse, Error>
+}
+
+extension PollutionAPI: PollutionDatasource {
     
-    static func pollutionDataLondon() -> AnyPublisher<PollutionAPIResponse, Error> {
+    func pollutionDataLondon() -> AnyPublisher<PollutionAPIResponse, Error> {
         let request = URLRequest(url: url)
         return agent.run(request)
             .map(\.value)
@@ -45,7 +49,7 @@ struct LocalAuthorityData {
         get { return lonStr.value }
     }
     
-    let siteData: [PollutionSiteData]
+    let siteData: [PollutionSiteData]?
     
 }
 
@@ -64,10 +68,10 @@ struct PollutionSiteData: Codable {
 }
 
 struct PollutionSpecies {
-    let code: String
-    let description: String
-    let qualityIndex: String
-    let qualityBand: String
+    let code: String?
+    let description: String?
+    let qualityIndex: String?
+    let qualityBand: String?
 }
 
 extension PollutionSpecies: Codable {
