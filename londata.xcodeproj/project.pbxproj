@@ -11,6 +11,7 @@
 		A33B474125EF8D82002AC2F2 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B474025EF8D82002AC2F2 /* LoadingIndicator.swift */; };
 		A33B474E25EFDBD6002AC2F2 /* AboutScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B474D25EFDBD6002AC2F2 /* AboutScreen.swift */; };
 		A33B475325EFDC32002AC2F2 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B475225EFDC32002AC2F2 /* ShareSheet.swift */; };
+		A33B475825EFF8A5002AC2F2 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33B475725EFF8A5002AC2F2 /* Launch Screen.storyboard */; };
 		A371385125EE44F0000324E9 /* LondataMapVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371385025EE44F0000324E9 /* LondataMapVM.swift */; };
 		A371385A25EEB23A000324E9 /* PollutionDatapoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371385925EEB23A000324E9 /* PollutionDatapoint.swift */; };
 		A371385F25EEB276000324E9 /* Borough.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371385E25EEB276000324E9 /* Borough.swift */; };
@@ -57,6 +58,7 @@
 		A33B474025EF8D82002AC2F2 /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		A33B474D25EFDBD6002AC2F2 /* AboutScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutScreen.swift; sourceTree = "<group>"; };
 		A33B475225EFDC32002AC2F2 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
+		A33B475725EFF8A5002AC2F2 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		A371385025EE44F0000324E9 /* LondataMapVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LondataMapVM.swift; sourceTree = "<group>"; };
 		A371385925EEB23A000324E9 /* PollutionDatapoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollutionDatapoint.swift; sourceTree = "<group>"; };
 		A371385E25EEB276000324E9 /* Borough.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Borough.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				A398CDE525E95EB000775778 /* Assets.xcassets */,
 				A398CDEA25E95EB000775778 /* Info.plist */,
 				A398CDE725E95EB000775778 /* Preview Content */,
+				A33B475725EFF8A5002AC2F2 /* Launch Screen.storyboard */,
 			);
 			path = londata;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A33B475825EFF8A5002AC2F2 /* Launch Screen.storyboard in Resources */,
 				A398CDE925E95EB000775778 /* Preview Assets.xcassets in Resources */,
 				A398CDE625E95EB000775778 /* Assets.xcassets in Resources */,
 			);
