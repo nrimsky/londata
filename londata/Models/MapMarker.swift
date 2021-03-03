@@ -8,26 +8,22 @@
 import Foundation
 import MapKit
 
-enum MapMarkerDatapoint {
+enum MapMarkerDatapoint: Equatable {
+    
     case covid(dataPoint: CovidDatapoint)
     case pollution(dataPoint: PollutionDatapoint)
-}
-
-struct MapMarker: Identifiable, Equatable {
     
-    var id: UUID
-    
-    static func == (lhs: MapMarker, rhs: MapMarker) -> Bool {
-        switch lhs.data {
+    static func == (lhs: MapMarkerDatapoint, rhs: MapMarkerDatapoint) -> Bool {
+        switch lhs {
         case .covid(let dataPoint1):
-            switch rhs.data {
+            switch rhs {
             case .covid(let dataPoint2):
                 return dataPoint1 == dataPoint2
             case .pollution:
                 return false
             }
         case .pollution(let dataPoint1):
-            switch rhs.data {
+            switch rhs {
             case .covid:
                 return false
             case .pollution(let dataPoint2):
@@ -35,6 +31,12 @@ struct MapMarker: Identifiable, Equatable {
             }
         }
     }
+    
+}
+
+struct MapMarker: Identifiable {
+    
+    var id: UUID
     
     let data: MapMarkerDatapoint
     let coordinate: CLLocationCoordinate2D

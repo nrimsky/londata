@@ -13,6 +13,7 @@ struct DataMap: View {
     @Binding var region: MKCoordinateRegion
     @Binding var mapMarkers: [MapMarker]
     @State var selected: MapMarkerDatapoint? = nil
+    let generator = UINotificationFeedbackGenerator()
     
     func infoView() -> AnyView {
         guard let data = selected else {
@@ -31,7 +32,7 @@ struct DataMap: View {
         ZStack {
             Map(coordinateRegion: $region, showsUserLocation: true, annotationItems: mapMarkers) { mapMarker in
                 MapAnnotation(coordinate: mapMarker.coordinate) {
-                    MapInfoAnnotation(data: mapMarker.data, selected: $selected)
+                    MapInfoAnnotation(data: mapMarker.data, hapticGenerator: generator, selected: $selected)
                 }
             }.ignoresSafeArea(.all, edges: .all)
             VStack {
