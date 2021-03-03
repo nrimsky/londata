@@ -26,7 +26,17 @@ class LondataMapVM: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     @Published var crimes = [StreetCrime]()
     @Published var pollutionData = [PollutionDatapoint]()
-    @Published var covidCases = [Borough: Int]()
+    @Published var covidCases = [CovidDatapoint]()
+    
+    @Published var mapMarkers = [MapMarker]()
+    
+    var mapMarkerPublisher: AnyPublisher<[MapMarker],Never> {
+        Publishers.CombineLatest($covidCases, $pollutionData).map { covidCases, pollutionData in
+            var c = covidCases.map { MapMarker(covidData: $0)}
+            c.append(contentsOf: pollutionData.map{ MapMarker(pollutionData: $0)})
+            return c
+        }.eraseToAnyPublisher()
+    }
     
     // MARK: - List of boroughs
     
@@ -49,6 +59,10 @@ class LondataMapVM: NSObject, ObservableObject, CLLocationManagerDelegate {
         self.crimeApi = crimeApi
         self.boroughs = PlaceNames.BOROUGHS.map{Borough(name: $0.key, latitude: $0.value.0, longitude: $0.value.1)}
         super.init()
+        mapMarkerPublisher
+            .receive(on: RunLoop.main)
+            .assign(to: \.mapMarkers, on: self)
+            .store(in: &cancellables)
         locationManager.delegate = self
         locationManager.pausesLocationUpdatesAutomatically = true
         requestAccessToLocation()
@@ -83,7 +97,7 @@ class LondataMapVM: NSObject, ObservableObject, CLLocationManagerDelegate {
             }, receiveValue: { [weak self] apiResponse in
                 print(apiResponse)
                 if let cases = apiResponse.data?.first??.newCases {
-                    self?.covidCases[borough] = cases
+                    self?.covidCases.append(CovidDatapoint(borough: borough, numCases: cases))
                 }
             })
         cancellables.insert(cancellable)

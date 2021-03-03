@@ -11,6 +11,7 @@ import MapKit
 struct SpeciesDatapoint: Equatable {
     let speciesName: String
     let qualityIndex: Int
+    let qualityDescription: String
 }
 
 struct PollutionDatapoint: Equatable, Identifiable {

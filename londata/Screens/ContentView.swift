@@ -13,8 +13,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            CovidMap(covidCases: $vm.covidCases)
-            PollutionMap(pollutionData: $vm.pollutionData)
+            DataMap(mapMarkers: $vm.mapMarkers)
         }.onAppear {
             vm.getAllCovidCases()
             vm.getPollutionData()

@@ -10,9 +10,9 @@
 		A371385125EE44F0000324E9 /* LondataMapVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371385025EE44F0000324E9 /* LondataMapVM.swift */; };
 		A371385A25EEB23A000324E9 /* PollutionDatapoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371385925EEB23A000324E9 /* PollutionDatapoint.swift */; };
 		A371385F25EEB276000324E9 /* Borough.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371385E25EEB276000324E9 /* Borough.swift */; };
-		A371386C25EEBB0B000324E9 /* CovidIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371386B25EEBB0B000324E9 /* CovidIndicator.swift */; };
-		A371387125EEBC3E000324E9 /* PollutionIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371387025EEBC3E000324E9 /* PollutionIndicator.swift */; };
-		A371387625EEC09C000324E9 /* PollutionMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371387525EEC09C000324E9 /* PollutionMap.swift */; };
+		A371387E25EED9EA000324E9 /* DataMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371387D25EED9EA000324E9 /* DataMap.swift */; };
+		A371388325EEDA66000324E9 /* MapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371388225EEDA66000324E9 /* MapMarker.swift */; };
+		A371388825EEDB33000324E9 /* CovidDatapoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371388725EEDB33000324E9 /* CovidDatapoint.swift */; };
 		A398CDE225E95EA900775778 /* londataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A398CDE125E95EA900775778 /* londataApp.swift */; };
 		A398CDE425E95EA900775778 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A398CDE325E95EA900775778 /* ContentView.swift */; };
 		A398CDE625E95EB000775778 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A398CDE525E95EB000775778 /* Assets.xcassets */; };
@@ -25,7 +25,10 @@
 		A3B59B7125EAB3FB002F7DCA /* CrimeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B59B7025EAB3FB002F7DCA /* CrimeAPI.swift */; };
 		A3B59B7725EAB80D002F7DCA /* StringBackedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B59B7625EAB80D002F7DCA /* StringBackedValue.swift */; };
 		A3B59B7C25EABE42002F7DCA /* PlaceNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B59B7B25EABE42002F7DCA /* PlaceNames.swift */; };
-		A3B59BF825EE4152002F7DCA /* CovidMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B59BEA25EE40F8002F7DCA /* CovidMap.swift */; };
+		A3BE581325EF08E500173121 /* PollutionMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BE581225EF08E500173121 /* PollutionMarker.swift */; };
+		A3BE582F25EF134C00173121 /* CovidMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BE582E25EF134C00173121 /* CovidMarker.swift */; };
+		A3BE583725EF142D00173121 /* MapInfoAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BE583625EF142D00173121 /* MapInfoAnnotation.swift */; };
+		A3BE583C25EF150400173121 /* CircleButtonImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BE583B25EF150400173121 /* CircleButtonImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,9 +52,9 @@
 		A371385025EE44F0000324E9 /* LondataMapVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LondataMapVM.swift; sourceTree = "<group>"; };
 		A371385925EEB23A000324E9 /* PollutionDatapoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollutionDatapoint.swift; sourceTree = "<group>"; };
 		A371385E25EEB276000324E9 /* Borough.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Borough.swift; sourceTree = "<group>"; };
-		A371386B25EEBB0B000324E9 /* CovidIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidIndicator.swift; sourceTree = "<group>"; };
-		A371387025EEBC3E000324E9 /* PollutionIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollutionIndicator.swift; sourceTree = "<group>"; };
-		A371387525EEC09C000324E9 /* PollutionMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollutionMap.swift; sourceTree = "<group>"; };
+		A371387D25EED9EA000324E9 /* DataMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMap.swift; sourceTree = "<group>"; };
+		A371388225EEDA66000324E9 /* MapMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarker.swift; sourceTree = "<group>"; };
+		A371388725EEDB33000324E9 /* CovidDatapoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidDatapoint.swift; sourceTree = "<group>"; };
 		A398CDDE25E95EA900775778 /* londata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = londata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A398CDE125E95EA900775778 /* londataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = londataApp.swift; sourceTree = "<group>"; };
 		A398CDE325E95EA900775778 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,7 +73,10 @@
 		A3B59B7025EAB3FB002F7DCA /* CrimeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimeAPI.swift; sourceTree = "<group>"; };
 		A3B59B7625EAB80D002F7DCA /* StringBackedValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringBackedValue.swift; sourceTree = "<group>"; };
 		A3B59B7B25EABE42002F7DCA /* PlaceNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceNames.swift; sourceTree = "<group>"; };
-		A3B59BEA25EE40F8002F7DCA /* CovidMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidMap.swift; sourceTree = "<group>"; };
+		A3BE581225EF08E500173121 /* PollutionMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollutionMarker.swift; sourceTree = "<group>"; };
+		A3BE582E25EF134C00173121 /* CovidMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidMarker.swift; sourceTree = "<group>"; };
+		A3BE583625EF142D00173121 /* MapInfoAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInfoAnnotation.swift; sourceTree = "<group>"; };
+		A3BE583B25EF150400173121 /* CircleButtonImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,10 +186,11 @@
 		A398CE1B25E9630400775778 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				A3B59BEA25EE40F8002F7DCA /* CovidMap.swift */,
-				A371386B25EEBB0B000324E9 /* CovidIndicator.swift */,
-				A371387025EEBC3E000324E9 /* PollutionIndicator.swift */,
-				A371387525EEC09C000324E9 /* PollutionMap.swift */,
+				A371387D25EED9EA000324E9 /* DataMap.swift */,
+				A3BE581225EF08E500173121 /* PollutionMarker.swift */,
+				A3BE582E25EF134C00173121 /* CovidMarker.swift */,
+				A3BE583625EF142D00173121 /* MapInfoAnnotation.swift */,
+				A3BE583B25EF150400173121 /* CircleButtonImage.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -193,6 +200,8 @@
 			children = (
 				A371385925EEB23A000324E9 /* PollutionDatapoint.swift */,
 				A371385E25EEB276000324E9 /* Borough.swift */,
+				A371388225EEDA66000324E9 /* MapMarker.swift */,
+				A371388725EEDB33000324E9 /* CovidDatapoint.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -346,21 +355,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A371387E25EED9EA000324E9 /* DataMap.swift in Sources */,
 				A371385A25EEB23A000324E9 /* PollutionDatapoint.swift in Sources */,
 				A3B59B7C25EABE42002F7DCA /* PlaceNames.swift in Sources */,
-				A371387625EEC09C000324E9 /* PollutionMap.swift in Sources */,
 				A371385F25EEB276000324E9 /* Borough.swift in Sources */,
 				A3B59B7725EAB80D002F7DCA /* StringBackedValue.swift in Sources */,
+				A371388825EEDB33000324E9 /* CovidDatapoint.swift in Sources */,
 				A3B59B6925EA6D5B002F7DCA /* Agent.swift in Sources */,
+				A3BE581325EF08E500173121 /* PollutionMarker.swift in Sources */,
 				A3B59B7125EAB3FB002F7DCA /* CrimeAPI.swift in Sources */,
-				A371387125EEBC3E000324E9 /* PollutionIndicator.swift in Sources */,
 				A398CDE425E95EA900775778 /* ContentView.swift in Sources */,
-				A3B59BF825EE4152002F7DCA /* CovidMap.swift in Sources */,
+				A371388325EEDA66000324E9 /* MapMarker.swift in Sources */,
 				A398CE3625E9636C00775778 /* CovidAPI.swift in Sources */,
+				A3BE583725EF142D00173121 /* MapInfoAnnotation.swift in Sources */,
 				A398CE2925E9635400775778 /* PollutionAPI.swift in Sources */,
-				A371386C25EEBB0B000324E9 /* CovidIndicator.swift in Sources */,
 				A398CDE225E95EA900775778 /* londataApp.swift in Sources */,
+				A3BE582F25EF134C00173121 /* CovidMarker.swift in Sources */,
 				A371385125EE44F0000324E9 /* LondataMapVM.swift in Sources */,
+				A3BE583C25EF150400173121 /* CircleButtonImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

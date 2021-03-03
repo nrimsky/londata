@@ -127,7 +127,7 @@ struct PollutionSiteData {
     
     func getSpeciesDatapoints() -> [SpeciesDatapoint]? {
         return species.data.compactMap {
-            ($0.qualityIndex != 0) ? SpeciesDatapoint(speciesName: $0.description, qualityIndex: $0.qualityIndex) : nil
+            ($0.qualityIndex != 0) ? SpeciesDatapoint(speciesName: $0.description, qualityIndex: $0.qualityIndex, qualityDescription: $0.qualityBand ?? "Unknown") : nil
         }
     }
 }
