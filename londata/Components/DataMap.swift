@@ -9,8 +9,8 @@ import SwiftUI
 import MapKit
 
 struct DataMap: View {
-    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 0.6, longitudeDelta: 0.5))
     
+    @Binding var region: MKCoordinateRegion
     @Binding var mapMarkers: [MapMarker]
     @State var selected: MapMarkerDatapoint? = nil
     
@@ -36,7 +36,11 @@ struct DataMap: View {
             }.ignoresSafeArea(.all, edges: .all)
             VStack {
                 Spacer()
-                infoView().padding(30)
+                infoView()
+                    .padding(30)
+                    .onTapGesture {
+                        selected = nil
+                    }
             }
         }
     }
@@ -44,6 +48,6 @@ struct DataMap: View {
 
 struct DataMap_Previews: PreviewProvider {
     static var previews: some View {
-        DataMap(mapMarkers: .constant([MapMarker]()))
+        DataMap(region: .constant(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 0.6, longitudeDelta: 0.5))), mapMarkers: .constant([MapMarker]()))
     }
 }

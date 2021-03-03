@@ -19,7 +19,7 @@ class LondataMapVM: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     // MARK: - Map centre
     
-    @Published var mapCentre = CLLocationCoordinate2D(latitude: 51.509865, longitude: -0.118092)
+    @Published var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 0.6, longitudeDelta: 0.5))
     
     
     // MARK: - Data
@@ -135,7 +135,7 @@ class LondataMapVM: NSObject, ObservableObject, CLLocationManagerDelegate {
         
     func goToMyLocation() {
         if let userLocation = lastKnownLocation {
-            mapCentre = userLocation
+            region.center = userLocation
         }
     }
     

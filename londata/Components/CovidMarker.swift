@@ -12,7 +12,8 @@ struct CovidMarker: View {
     let covidDatapoint: CovidDatapoint
     var body: some View {
         VStack(alignment: .center, spacing: 5) {
-            Text("📍 Covid data for \(covidDatapoint.borough.name)").foregroundColor(Color.red).bold()
+            Text("📍 Covid data for \(covidDatapoint.borough.name)")
+                .foregroundColor(Color.blue).bold()
             HStack(spacing: 10) {
                 VStack(alignment: .leading, spacing: 0) {
                     Text("🦠 New covid cases")
@@ -24,7 +25,7 @@ struct CovidMarker: View {
                     .fontWeight(.semibold)
             }
         }.padding(10)
-        .background(Color.white)
+        .background(Color(UIColor.systemBackground))
         .clipShape(RoundedRectangle(cornerRadius: 10))
         .overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 1).foregroundColor(.blue))
         

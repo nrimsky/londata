@@ -15,7 +15,7 @@ struct PollutionMarker: View {
         VStack(alignment: .center, spacing: 5) {
             Text("📍Air quality measured: \(pollutionDatapoint.placeName)")
                 .fontWeight(.bold)
-                .foregroundColor(Color.red)
+                .foregroundColor(.blue)
             HStack(spacing: 10) {
                 VStack(alignment: .leading, spacing: 5) {
                     Text("💨Species")
@@ -44,7 +44,7 @@ struct PollutionMarker: View {
                 
             }
         }.padding(10)
-        .background(Color.white)
+        .background(Color(UIColor.systemBackground))
         .clipShape(RoundedRectangle(cornerRadius: 10))
         .overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 1).foregroundColor(.blue))
     }
