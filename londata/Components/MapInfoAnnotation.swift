@@ -22,11 +22,7 @@ struct MapInfoAnnotation: View {
             return CircleButtonImage(icon: .pollution)
         }
     }
-    
-    func imageName() -> String {
-        return "circle.fill"
-    }
-    
+        
     var body: some View {
         Button(action: {selected = data}, label: buttonImage)
     }

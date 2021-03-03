@@ -25,10 +25,20 @@ struct CircleButtonImage: View {
         }
     }
     
+    var image: Image {
+        switch icon {
+        case .covid:
+            return Image("CovidIcon")
+        case .pollution:
+            return Image(systemName: "lungs")
+        }
+    }
+    
     var body: some View {
-        Image(systemName: icon.rawValue)
-            .font(.system(size: 18, weight: .medium))
-            .frame(width: 18, height: 18, alignment: .center)
+        image
+            .resizable()
+            .font(.system(size: 25, weight: .medium))
+            .frame(width: 25, height: 25, alignment: .center)
             .foregroundColor(.white)
             .padding(.all, 8)
             .background(color)

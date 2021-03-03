@@ -12,12 +12,14 @@ import SwiftUI
 struct AboutScreen: View {
     
     @State var showShareSheet: Bool = false
+    @Environment(\.presentationMode) var presentationMode
 
     
     let text = """
     OpenUrban CIC is a London based nonprofit developing Open Data based apps and digital tools.
     The aim of this app is to enable you to explore and interact with London-related Open Data feeds. The app can also help you make informed decisions about where to go running, cycling or walking in London.
     We are planning to include more data sources and interesting London statistics into the app.
+    You suggest new app features and give feedback on LonData on our website.
     """
     
     let air_source = """
@@ -49,6 +51,10 @@ struct AboutScreen: View {
         showShareSheet = true
     }
     
+    func close() {
+        self.presentationMode.wrappedValue.dismiss()
+    }
+    
     var body: some View {
         NavigationView {
             ScrollView {
@@ -60,7 +66,7 @@ struct AboutScreen: View {
                         Button(action: openOpenUrbanWesbite) {
                             HStack {
                                 Image(systemName: "arrow.up.right")
-                                Text("More about OpenUrban CIC")
+                                Text("More about OpenUrban CIC on our website")
                             }
                         }
                     }
@@ -104,8 +110,12 @@ struct AboutScreen: View {
                         Text(covid_source)
                     }
                 }.padding(15)
-            }.navigationBarTitle("About LonData", displayMode: .inline)
-        }
+            }
+            .navigationBarTitle("About LonData", displayMode: .inline)
+            .navigationBarItems(trailing: Button(action: close) {
+                Text("Close")
+            })
+        }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
 struct AboutScreen_Previews: PreviewProvider {
