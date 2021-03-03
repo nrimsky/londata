@@ -27,8 +27,10 @@ class LondataMapVM: NSObject, ObservableObject, CLLocationManagerDelegate {
     @Published var crimes = [StreetCrime]()
     @Published var pollutionData = [PollutionDatapoint]()
     @Published var covidCases = [CovidDatapoint]()
-    
     @Published var mapMarkers = [MapMarker]()
+    
+    @Published var hasError: Bool = false
+    @Published var isLoading: Bool = false
     
     var mapMarkerPublisher: AnyPublisher<[MapMarker],Never> {
         Publishers.CombineLatest($covidCases, $pollutionData).map { covidCases, pollutionData in
@@ -71,31 +73,43 @@ class LondataMapVM: NSObject, ObservableObject, CLLocationManagerDelegate {
     // MARK: - Api calls
     
     func getCrimes(for location: CLLocationCoordinate2D) {
+        hasError = false
+        self.isLoading = true
         let cancellable = crimeApi.crimes(location: location)
-            .sink(receiveCompletion: { result in
+            .sink(receiveCompletion: { [weak self] result in
+                self?.isLoading = false
                 switch result {
                 case .failure(let error):
                     print("Error \(error)")
+                    if (!(self?.hasError ?? false)) {
+                        self?.hasError = true
+                    }
                 case .finished:
                     break
                 }
             }, receiveValue: { [weak self] crimes in
+                self?.isLoading = false
                 self?.crimes = crimes
             })
         cancellables.insert(cancellable)
     }
     
     private func getCovidCases(for borough: Borough) {
+        self.isLoading = true
         let cancellable = covidApi.cases(borough: borough)
-            .sink(receiveCompletion: { result in
+            .sink(receiveCompletion: { [weak self] result in
+                self?.isLoading = false
                 switch result {
                 case .failure(let error):
                     print("Error getting covid data for \(borough.name) : \(error)")
+                    if (!(self?.hasError ?? false)) {
+                        self?.hasError = true
+                    }
                 case .finished:
                     break
                 }
             }, receiveValue: { [weak self] apiResponse in
-                print(apiResponse)
+                self?.isLoading = false
                 if let cases = apiResponse.data?.first??.newCases {
                     self?.covidCases.append(CovidDatapoint(borough: borough, numCases: cases))
                 }
@@ -104,22 +118,29 @@ class LondataMapVM: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
     
     func getAllCovidCases() {
+        hasError = false
         for borough in boroughs {
             getCovidCases(for: borough)
         }
     }
     
     func getPollutionData() {
+        hasError = false
+        self.isLoading = true
         let cancellable = pollutionApi.pollutionDataLondon()
-            .sink(receiveCompletion: { result in
+            .sink(receiveCompletion: { [weak self] result in
+                self?.isLoading = false
                 switch result {
                 case .failure(let error):
                     print("Error getting pollution data \(error)")
+                    if (!(self?.hasError ?? false)) {
+                        self?.hasError = true
+                    }
                 case .finished:
                     break
                 }
             }, receiveValue: { [weak self] apiResponse in
-                print(apiResponse)
+                self?.isLoading = false
                 self?.pollutionData = apiResponse.getPollutionDatapoints()
             })
         cancellables.insert(cancellable)
@@ -135,7 +156,7 @@ class LondataMapVM: NSObject, ObservableObject, CLLocationManagerDelegate {
         
     func goToMyLocation() {
         if let userLocation = lastKnownLocation {
-            region.center = userLocation
+            region = MKCoordinateRegion(center: userLocation, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
         }
     }
     

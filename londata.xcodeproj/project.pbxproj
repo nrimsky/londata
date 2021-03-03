@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A33B473C25EF8CA4002AC2F2 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B473B25EF8CA4002AC2F2 /* ErrorView.swift */; };
+		A33B474125EF8D82002AC2F2 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B474025EF8D82002AC2F2 /* LoadingIndicator.swift */; };
+		A33B474E25EFDBD6002AC2F2 /* AboutScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B474D25EFDBD6002AC2F2 /* AboutScreen.swift */; };
+		A33B475325EFDC32002AC2F2 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B475225EFDC32002AC2F2 /* ShareSheet.swift */; };
 		A371385125EE44F0000324E9 /* LondataMapVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371385025EE44F0000324E9 /* LondataMapVM.swift */; };
 		A371385A25EEB23A000324E9 /* PollutionDatapoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371385925EEB23A000324E9 /* PollutionDatapoint.swift */; };
 		A371385F25EEB276000324E9 /* Borough.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371385E25EEB276000324E9 /* Borough.swift */; };
@@ -49,6 +53,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A33B473B25EF8CA4002AC2F2 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		A33B474025EF8D82002AC2F2 /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
+		A33B474D25EFDBD6002AC2F2 /* AboutScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutScreen.swift; sourceTree = "<group>"; };
+		A33B475225EFDC32002AC2F2 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
 		A371385025EE44F0000324E9 /* LondataMapVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LondataMapVM.swift; sourceTree = "<group>"; };
 		A371385925EEB23A000324E9 /* PollutionDatapoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollutionDatapoint.swift; sourceTree = "<group>"; };
 		A371385E25EEB276000324E9 /* Borough.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Borough.swift; sourceTree = "<group>"; };
@@ -116,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				A398CDE325E95EA900775778 /* ContentView.swift */,
+				A33B474D25EFDBD6002AC2F2 /* AboutScreen.swift */,
+				A33B475225EFDC32002AC2F2 /* ShareSheet.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -191,6 +201,8 @@
 				A3BE582E25EF134C00173121 /* CovidMarker.swift */,
 				A3BE583625EF142D00173121 /* MapInfoAnnotation.swift */,
 				A3BE583B25EF150400173121 /* CircleButtonImage.swift */,
+				A33B473B25EF8CA4002AC2F2 /* ErrorView.swift */,
+				A33B474025EF8D82002AC2F2 /* LoadingIndicator.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -357,8 +369,10 @@
 			files = (
 				A371387E25EED9EA000324E9 /* DataMap.swift in Sources */,
 				A371385A25EEB23A000324E9 /* PollutionDatapoint.swift in Sources */,
+				A33B473C25EF8CA4002AC2F2 /* ErrorView.swift in Sources */,
 				A3B59B7C25EABE42002F7DCA /* PlaceNames.swift in Sources */,
 				A371385F25EEB276000324E9 /* Borough.swift in Sources */,
+				A33B474E25EFDBD6002AC2F2 /* AboutScreen.swift in Sources */,
 				A3B59B7725EAB80D002F7DCA /* StringBackedValue.swift in Sources */,
 				A371388825EEDB33000324E9 /* CovidDatapoint.swift in Sources */,
 				A3B59B6925EA6D5B002F7DCA /* Agent.swift in Sources */,
@@ -366,6 +380,7 @@
 				A3B59B7125EAB3FB002F7DCA /* CrimeAPI.swift in Sources */,
 				A398CDE425E95EA900775778 /* ContentView.swift in Sources */,
 				A371388325EEDA66000324E9 /* MapMarker.swift in Sources */,
+				A33B474125EF8D82002AC2F2 /* LoadingIndicator.swift in Sources */,
 				A398CE3625E9636C00775778 /* CovidAPI.swift in Sources */,
 				A3BE583725EF142D00173121 /* MapInfoAnnotation.swift in Sources */,
 				A398CE2925E9635400775778 /* PollutionAPI.swift in Sources */,
@@ -373,6 +388,7 @@
 				A3BE582F25EF134C00173121 /* CovidMarker.swift in Sources */,
 				A371385125EE44F0000324E9 /* LondataMapVM.swift in Sources */,
 				A3BE583C25EF150400173121 /* CircleButtonImage.swift in Sources */,
+				A33B475325EFDC32002AC2F2 /* ShareSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

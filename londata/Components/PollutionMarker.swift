@@ -13,12 +13,12 @@ struct PollutionMarker: View {
     
     var body: some View {
         VStack(alignment: .center, spacing: 5) {
-            Text("📍Air quality measured: \(pollutionDatapoint.placeName)")
+            Text("☁️ Air quality @ \(pollutionDatapoint.placeName)")
                 .fontWeight(.bold)
                 .foregroundColor(.blue)
             HStack(spacing: 10) {
                 VStack(alignment: .leading, spacing: 5) {
-                    Text("💨Species")
+                    Text("💨 Species")
                         .font(.caption)
                         .fontWeight(.semibold)
                     ForEach(pollutionDatapoint.speciesData, id: \.speciesName) { species in
