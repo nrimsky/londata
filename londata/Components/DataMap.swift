@@ -20,8 +20,6 @@ struct DataMap: View {
             return AnyView(EmptyView())
         }
         switch data {
-        case .covid(dataPoint: let covidDatapoint):
-            return AnyView(CovidMarker(covidDatapoint: covidDatapoint))
         case .pollution(dataPoint: let pollutionDatapoint):
             return AnyView(PollutionMarker(pollutionDatapoint: pollutionDatapoint))
         }

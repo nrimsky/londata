@@ -14,7 +14,6 @@ struct ContentView: View {
     @State var showInfoSheet: Bool = false
     
     func fetchData() {
-        vm.getAllCovidCases()
         vm.getPollutionData()
     }
     
@@ -52,7 +51,6 @@ struct ContentView: View {
                     )
                 if (vm.hasError) {
                     ErrorView(onClick: { [vm] in
-                        vm.getAllCovidCases()
                         vm.getPollutionData()
                     })
                 }

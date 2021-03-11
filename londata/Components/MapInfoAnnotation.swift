@@ -32,8 +32,6 @@ struct MapInfoAnnotation: View {
     
     var textDescription: String {
         switch data {
-        case .covid(let dataPoint):
-            return "Coronavirus data for \(dataPoint.borough.name)"
         case .pollution(let dataPoint):
             return "Pollution data for \(dataPoint.placeName)"
         }
@@ -42,8 +40,6 @@ struct MapInfoAnnotation: View {
     
     func buttonImage() -> CircleButtonImage {
         switch data {
-        case .covid:
-            return CircleButtonImage(icon: .covid)
         case .pollution:
             return CircleButtonImage(icon: .pollution)
         }
@@ -57,7 +53,13 @@ struct MapInfoAnnotation: View {
 }
 
 struct MapInfoAnnotation_Previews: PreviewProvider {
+    
+
+    
     static var previews: some View {
-        MapInfoAnnotation(data: MapMarkerDatapoint.covid(dataPoint: CovidDatapoint(borough: Borough(name: "Barnet", latitude: 0, longitude: 0), numCases: 2)), hapticGenerator: UINotificationFeedbackGenerator(), selected: .constant(MapMarkerDatapoint.covid(dataPoint: CovidDatapoint(borough: Borough(name: "Barnet", latitude: 0, longitude: 0), numCases: 2))))
+        let species = SpeciesDatapoint(speciesName: "nitrogen dioxide", qualityIndex: 1, qualityDescription: "low")
+        let pollutionData = PollutionDatapoint(speciesData: [species], placeName: "London", latitude: 51, longitude: 0)
+        let mapData = MapMarkerDatapoint.pollution(dataPoint: pollutionData)
+        return MapInfoAnnotation(data: mapData, hapticGenerator: UINotificationFeedbackGenerator(), selected: .constant(mapData))
     }
 }
