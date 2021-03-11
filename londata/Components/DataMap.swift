@@ -34,6 +34,10 @@ struct DataMap: View {
                 }
             }.ignoresSafeArea(.all, edges: .all)
             VStack {
+                HStack {
+                    Spacer()
+                    Gradient().padding(20)
+                }
                 Spacer()
                 infoView()
                     .padding(30)

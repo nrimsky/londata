@@ -10,8 +10,8 @@
 		A33B473C25EF8CA4002AC2F2 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B473B25EF8CA4002AC2F2 /* ErrorView.swift */; };
 		A33B474125EF8D82002AC2F2 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B474025EF8D82002AC2F2 /* LoadingIndicator.swift */; };
 		A33B474E25EFDBD6002AC2F2 /* AboutScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B474D25EFDBD6002AC2F2 /* AboutScreen.swift */; };
-		A33B475325EFDC32002AC2F2 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B475225EFDC32002AC2F2 /* ShareSheet.swift */; };
 		A33B475825EFF8A5002AC2F2 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33B475725EFF8A5002AC2F2 /* Launch Screen.storyboard */; };
+		A33B478F25FA893D002AC2F2 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B478E25FA893D002AC2F2 /* Gradient.swift */; };
 		A371385125EE44F0000324E9 /* LondataMapVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371385025EE44F0000324E9 /* LondataMapVM.swift */; };
 		A371385A25EEB23A000324E9 /* PollutionDatapoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371385925EEB23A000324E9 /* PollutionDatapoint.swift */; };
 		A371387E25EED9EA000324E9 /* DataMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371387D25EED9EA000324E9 /* DataMap.swift */; };
@@ -52,8 +52,8 @@
 		A33B473B25EF8CA4002AC2F2 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		A33B474025EF8D82002AC2F2 /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		A33B474D25EFDBD6002AC2F2 /* AboutScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutScreen.swift; sourceTree = "<group>"; };
-		A33B475225EFDC32002AC2F2 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
 		A33B475725EFF8A5002AC2F2 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		A33B478E25FA893D002AC2F2 /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		A371385025EE44F0000324E9 /* LondataMapVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LondataMapVM.swift; sourceTree = "<group>"; };
 		A371385925EEB23A000324E9 /* PollutionDatapoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollutionDatapoint.swift; sourceTree = "<group>"; };
 		A371387D25EED9EA000324E9 /* DataMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMap.swift; sourceTree = "<group>"; };
@@ -117,7 +117,6 @@
 			children = (
 				A398CDE325E95EA900775778 /* ContentView.swift */,
 				A33B474D25EFDBD6002AC2F2 /* AboutScreen.swift */,
-				A33B475225EFDC32002AC2F2 /* ShareSheet.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -195,6 +194,7 @@
 				A3BE583B25EF150400173121 /* CircleButtonImage.swift */,
 				A33B473B25EF8CA4002AC2F2 /* ErrorView.swift */,
 				A33B474025EF8D82002AC2F2 /* LoadingIndicator.swift */,
+				A33B478E25FA893D002AC2F2 /* Gradient.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -372,7 +372,7 @@
 				A398CDE225E95EA900775778 /* londataApp.swift in Sources */,
 				A371385125EE44F0000324E9 /* LondataMapVM.swift in Sources */,
 				A3BE583C25EF150400173121 /* CircleButtonImage.swift in Sources */,
-				A33B475325EFDC32002AC2F2 /* ShareSheet.swift in Sources */,
+				A33B478F25FA893D002AC2F2 /* Gradient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,7 +539,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.org.openurban.londondata;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -562,7 +562,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.org.openurban.londondata;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

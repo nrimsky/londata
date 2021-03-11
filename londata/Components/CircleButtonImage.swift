@@ -8,27 +8,16 @@
 import SwiftUI
 
 enum ButtonIcon: String {
-    case covid = "person.crop.circle.badge.exclamationmark"
     case pollution = "lungs"
 }
 
 struct CircleButtonImage: View {
     
     let icon: ButtonIcon
-    
-    var color: Color {
-        switch icon {
-        case .covid:
-            return Color.green
-        case .pollution:
-            return Color.gray
-        }
-    }
-    
+    let val: Int?
+
     var image: Image {
         switch icon {
-        case .covid:
-            return Image("CovidIcon")
         case .pollution:
             return Image(systemName: "lungs")
         }
@@ -41,7 +30,7 @@ struct CircleButtonImage: View {
             .frame(width: 25, height: 25, alignment: .center)
             .foregroundColor(.white)
             .padding(.all, 8)
-            .background(color)
+            .background(Color(color(val: val)))
             .clipShape(Circle())
             .overlay(
                 Circle()
@@ -53,6 +42,6 @@ struct CircleButtonImage: View {
 
 struct CircleButtonImage_Previews: PreviewProvider {
     static var previews: some View {
-        CircleButtonImage(icon: .covid)
+        CircleButtonImage(icon: .pollution, val:0)
     }
 }

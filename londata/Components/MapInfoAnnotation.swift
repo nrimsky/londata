@@ -40,8 +40,9 @@ struct MapInfoAnnotation: View {
     
     func buttonImage() -> CircleButtonImage {
         switch data {
-        case .pollution:
-            return CircleButtonImage(icon: .pollution)
+        case .pollution(let dataPoint):
+            return CircleButtonImage(icon: .pollution,
+                                     val: dataPoint.speciesData.map{$0.qualityIndex}.max())
         }
     }
         
